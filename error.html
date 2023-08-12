@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error Page</title>
+    <script>
+        // Retrieve the message parameter from the query string
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var errorMessage = urlParams.get('msg');
+
+        // Display the error message
+        window.onload = function() {
+            var errorElement = document.getElementById('error-message');
+            errorElement.innerHTML = errorMessage;
+        };
+    </script>
+</head>
+<body>
+    <h1>Error Page</h1>
+    <p id="error-message"></p>
+</body>
+</html
